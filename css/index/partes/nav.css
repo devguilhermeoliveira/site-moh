@@ -17,7 +17,7 @@ nav {
 nav h3 {
   font-family: 'montserrat-black';
   color: var(--cor-branco);
-  letter-spacing: 10px;
+  letter-spacing: 5px;
   font-size: 15px;
 }
 nav .opcoes {

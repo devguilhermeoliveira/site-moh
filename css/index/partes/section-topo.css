@@ -1,0 +1,94 @@
+/* <section class="topo"> */
+section.topo {
+  display: flex;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+/* <div class="titulo"> */
+section.topo .titulo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 50%;
+  padding: 100px;
+  min-height: 600px;
+  z-index: 2;
+}
+section.topo .titulo h1 {
+  font-family: 'montserrat-black';
+  font-size: clamp(2.5rem, 1vw, 4rem);
+  color: var(--cor-branco);
+}
+section.topo .titulo h1 span {
+  color: var(--cor-principal);
+}
+section.topo .titulo p {
+  font-family: 'montserrat-medium';
+  font-size: clamp(1rem, 1vw, 1.2rem);
+  color: var(--cor-cinza-claro);
+  line-height: 1.5;
+  margin: 10px 0 15px 0;
+}
+section.topo .titulo a {
+  font-family: 'montserrat-bold';
+  font-size: clamp(1rem, 1vw, 1.2rem);
+  color: var(--cor-cinza-escuro);
+  background-color: var(--cor-principal);
+  padding: 20px 30px;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+section.topo .titulo a:hover {
+  background-color: var(--cor-branco);
+}
+/* <div class="titulo"> */
+section.topo .imagem {
+  width: 50%;
+  z-index: 2;
+  background-size: cover;
+  background-position: center;
+}
+/* <img class="efeito"> */
+section.topo img.efeito {
+  position: absolute;
+  bottom: -800px;
+  left: 100px;
+  width: 1300px;
+  opacity: 0.3;
+  z-index: 1;
+  animation: rodandoEfeito 30s linear infinite;
+}
+@keyframes rodandoEfeito {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* Mudanças no código quando chegar em 1000px (tablet e celular) */
+@media screen and (max-width: 1000px) {
+  section.topo {
+    flex-direction: column;
+  }
+  /* <div class="titulo"> */
+  section.topo .titulo {
+    width: 100%;
+    padding: 100px 20px 60px 20px;
+    min-height: auto;
+  }
+  /* <div class="titulo"> */
+  section.topo .imagem {
+    width: 100%;
+    min-height: 400px;
+    z-index: 2;
+  }
+  /* <img class="efeito"> */
+  section.topo img.efeito {
+    bottom: -200px;
+    left: -100px;
+    width: 1000px;
+  }
+}

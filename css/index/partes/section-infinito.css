@@ -1,0 +1,105 @@
+/* <section class="infinito"> */
+section.infinito {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 80px 0 80px 0;
+  background-color: rgba(255, 255, 255, 0.05);
+  position: relative;
+  overflow: hidden;
+}
+/* <div class="titulo"> */
+section.infinito .titulo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  padding: 0 0 30px 0;
+  z-index: 2;
+}
+section.infinito .titulo h2 {
+  font-family: 'montserrat-black';
+  font-size: clamp(2.5rem, 1vw, 4rem);
+  color: var(--cor-branco);
+}
+section.infinito .titulo h2 span {
+  color: var(--cor-principal);
+}
+section.infinito .titulo p {
+  font-family: 'montserrat-medium';
+  font-size: clamp(1rem, 1vw, 1.2rem);
+  color: var(--cor-branco);
+  line-height: 1.5;
+  margin: 10px 0 0 0;
+}
+/* <div class="slide"> */
+section.infinito .slide {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  overflow: hidden;
+  z-index: 2;
+}
+section.infinito .slide .imagens {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  animation: scroll 60s linear infinite;
+  width: calc(280px * 16);
+}
+section.infinito .slide .imagens .imagem {
+  width: 270px;
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 5px;
+  margin: 0 10px 0 0;
+}
+/* Animação que faz ficar rodando infinitamente */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-280px * 8));
+    /* o número 8 representa a quantidade de imagens que tem no slide, se o seu slide tiver 5 itens por exemplo, coloque 5 no lugar do 8 */
+  }
+}
+/* <img class="efeito"> */
+section.infinito img.efeito {
+  position: absolute;
+  bottom: -800px;
+  left: 100px;
+  width: 1300px;
+  opacity: 0.2;
+  z-index: 1;
+  animation: rodandoEfeito 30s linear infinite;
+}
+@keyframes rodandoEfeito {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* Mudanças no código quando chegar em 1000px (tablet e celular) */
+@media screen and (max-width: 1000px) {
+  section.infinito {
+    padding: 50px 0 50px 0;
+  }
+  section.infinito .titulo {
+    padding: 0 20px 30px 20px;
+  }
+  /* <img class="efeito"> */
+  section.infinito img.efeito {
+    bottom: -200px;
+    left: -200px;
+    width: 1000px;
+  }
+}

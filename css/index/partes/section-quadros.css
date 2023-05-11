@@ -6,6 +6,7 @@ section.quadros {
   padding: 200px 100px 100px 100px;
 }
 section.quadros .itens {
+  padding-top: 50px;
   display: flex;
   justify-content: space-between;
   margin: 0 0 40px 0;

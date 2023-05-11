@@ -6,7 +6,6 @@ section.quadros {
   padding: 200px 100px 100px 100px;
 }
 section.quadros .itens {
-  padding-top: 50px;
   display: flex;
   justify-content: space-between;
   margin: 0 0 40px 0;
@@ -56,6 +55,7 @@ section.quadros .itens .item .texto p {
   margin: 10px 0 0 0;
 }
 section.quadros .parte {
+  padding-bottom: 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;

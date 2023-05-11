@@ -55,7 +55,7 @@ section.quadros .itens .item .texto p {
   margin: 10px 0 0 0;
 }
 section.quadros .parte {
-  padding-bottom: 20px;
+  padding-bottom: 200px;
   display: flex;
   align-items: center;
   justify-content: space-between;

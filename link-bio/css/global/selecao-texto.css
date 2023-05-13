@@ -3,3 +3,11 @@
   color: var(--cor-cinza-escuro);
   background-color: var(--cor-principal);
 }
+
+#nnome {
+  letter-spacing: 9px;
+}
+
+#sub {
+  letter-spacing: 2px;
+}

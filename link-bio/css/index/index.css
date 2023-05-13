@@ -1,0 +1,5 @@
+/* Importanto as configurações globais de CSS */
+@import '../global/global.css';
+
+/* Seções que tem na página */
+@import './partes/section-bio.css';

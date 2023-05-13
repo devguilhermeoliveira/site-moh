@@ -1,0 +1,112 @@
+/* <section class="bio"> */
+section.bio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  padding: 80px 20px;
+}
+/* <div class="titulo"> */
+section.bio .titulo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  max-width: 500px;
+  z-index: 2;
+}
+section.bio .titulo .foto {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  margin: 0 0 20px 0;
+}
+section.bio .titulo h2 {
+  font-family: 'montserrat-black';
+  font-size: clamp(2rem, 1vw, 4rem);
+  color: var(--cor-principal);
+}
+section.bio .titulo h3 {
+  font-family: 'montserrat-medium';
+  font-size: clamp(1.2rem, 1vw, 2rem);
+  color: var(--cor-branco);
+  letter-spacing: 10px;
+}
+section.bio .titulo p {
+  font-family: 'montserrat-medium';
+  font-size: clamp(0.8rem, 1vw, 1rem);
+  color: var(--cor-cinza-claro);
+  line-height: 1.5;
+  margin: 10px 0 15px 0;
+}
+/* <div class="links"> */
+section.bio .links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 400px;
+}
+section.bio .links a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: 'montserrat-bold';
+  font-size: clamp(0.8rem, 1vw, 1rem);
+  color: var(--cor-branco);
+  background-color: rgba(255, 255, 255, 0.1);
+  border-left: 5px solid var(--cor-principal);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  width: 100%;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 10px 0 0 0;
+  transition: all 0.3s;
+}
+section.bio .links a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+section.bio .links a img {
+  width: 100%;
+  max-width: 30px;
+}
+/* <img class="efeito"> */
+section.bio .faixa {
+  position: absolute;
+  width: 100%;
+  height: 300px;
+  min-height: 300px;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.05));
+  background: -webkit-linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.05));
+  left: 0;
+  top: -300px;
+  animation: rodandoEfeito 10s linear infinite;
+}
+@keyframes rodandoEfeito {
+  0% {
+    top: -300px;
+  }
+  100% {
+    top: 100%;
+  }
+}
+/* Mudanças no código quando chegar em 1000px (tablet e celular) */
+@media screen and (max-width: 1000px) {
+  section.bio {
+    justify-content: flex-start;
+    padding: 50px 20px;
+  }
+}

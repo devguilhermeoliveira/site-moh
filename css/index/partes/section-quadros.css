@@ -18,6 +18,7 @@ section.quadros .itens .item {
   width: calc(33.33% - 10px);
 }
 section.quadros .itens .item img {
+  background-color: gray;
   padding-top: 20px;
   position: absolute;
   bottom: 150px;
@@ -56,6 +57,8 @@ section.quadros .itens .item .texto p {
   margin: 10px 0 0 0;
 }
 section.quadros .parte {
+  padding: 50px 0 50px 0;
+  background-color: rgba(0, 255, 255, 0.274);
   display: flex;
   align-items: center;
   justify-content: space-between;

@@ -8,7 +8,7 @@ section.quadros {
 section.quadros .itens {
   display: flex;
   justify-content: space-between;
-  margin: 0 0 40px 0;
+  margin: 20px 0 80px 0;
 }
 section.quadros .itens .item {
   display: flex;
